@@ -9,7 +9,7 @@ import springwiring.AccountServiceImpl;
 @Configuration 
 public class SpringConfig {
 
-`
+
     @Bean("service") //replacing <bean> tag in xml file 
     public AccountServiceImpl abcd(){
         return new AccountServiceImpl(); //thi obj registered in spring container
@@ -19,4 +19,4 @@ public class SpringConfig {
         return new AccountRepImpl(); //thi obj registered in spring container
     }
     }
-}
+
