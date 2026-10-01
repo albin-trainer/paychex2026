@@ -3,9 +3,12 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 		   https://www.springframework.org/schema/beans/spring-beans.xsd">
-		   <!-- instructions to the spring container -->
-	<bean id="h" class="com.example.beans.HelloBeanImpl" lazy-init="false" scope="prototype">
-	 <!-- setMsg("HAve a nice Day!!!!")  -->
-		<property name="msg" value="HAve a nice Day !!!!"/>
-	</bean>
+           
+<bean id="service" class="springwiring.AccountServiceImpl">
+        <property name="rep"  ref="accrep" />
+</bean>
+
+<bean id="accrep" class="springwiring.AccountRepImpl"></bean>
+
+
  </beans>
