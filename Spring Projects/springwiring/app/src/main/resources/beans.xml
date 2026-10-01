@@ -4,11 +4,13 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 		   https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="service" class="springwiring.AccountServiceImpl">
+<bean id="service" class="springwiring.AccountServiceImpl" autowire="byType">
+<!-- wiring-->
+<!--
         <property name="repository"  ref="accrep" />
+		-->
 </bean>
-
-<bean id="accrep" class="springwiring.AccountRepImpl">
+<bean id="repository" class="springwiring.AccountRepImpl">
 </bean>
 
 
