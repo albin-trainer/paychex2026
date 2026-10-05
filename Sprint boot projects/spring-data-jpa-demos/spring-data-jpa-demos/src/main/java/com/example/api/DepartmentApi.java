@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entity.Department;
+import com.example.exceptions.ApplicationException;
 import com.example.repository.DepartmentRepo;
 
 @RestController 
@@ -36,7 +37,7 @@ public class DepartmentApi {
         if(optional.isPresent()){
            return  optional.get();
         }
-        return  null;
-
+        //throw used to throw  a exception explicitly .....
+        throw new ApplicationException("The department id "+id+" is not found");
     }
 }
