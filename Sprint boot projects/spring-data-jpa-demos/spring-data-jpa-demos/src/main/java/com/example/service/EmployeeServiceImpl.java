@@ -24,9 +24,9 @@ public class EmployeeServiceImpl  implements  EmployeeService{
         Department dept=
         deptRepo.findById(dto.getDeptId()).
         orElseThrow(  ()  -> new ApplicationException("Dept not found"));
-        
+
         Employee e=new Employee();
-        e.setEmpName(dto.getEmpName());
+        e.setEmpName(dto.getEmpName()); 
         e.setSalary(dto.getSalary());
         e.setAddress(dto.getAddress());
         e.setDept(dept);
@@ -36,15 +36,13 @@ public class EmployeeServiceImpl  implements  EmployeeService{
 
     @Override
     public List<Employee> searchByAddress(String address) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'searchByAddress'");
+        return empRepo.findByAddress(address);
     }
 
     @Override
     public Employee searchById(int eid) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'searchById'");
-    }
+        return  empRepo.findById(eid).orElseThrow(()-> new ApplicationException("emp id not found"));    }
 
     @Override
     public Employee updatEmployee(EmployeeDTO dto) {
