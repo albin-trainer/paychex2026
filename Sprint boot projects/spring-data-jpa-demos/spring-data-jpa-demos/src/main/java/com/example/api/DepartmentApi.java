@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,9 +24,9 @@ public class DepartmentApi {
     private DepartmentRepo repo;
 
     @PostMapping 
-    public Department addNewDepartment(@RequestBody   Department d){
+    public   ResponseEntity<Department> addNewDepartment(@RequestBody   Department d){
         repo.save(d);
-        return d;
+        return  new ResponseEntity<>(d, HttpStatus.CREATED);
     }
     @GetMapping 
     public List<Department> getAllDepartments(){
