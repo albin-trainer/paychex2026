@@ -46,8 +46,13 @@ public class EmployeeServiceImpl  implements  EmployeeService{
 
     @Override
     public Employee updatEmployee(EmployeeDTO dto) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updatEmployee'");
+        Employee e=empRepo.findById(dto.getEmpId()).orElseThrow(()-> new ApplicationException("emp id not found"));
+        Department d=deptRepo.findById(dto.getDeptId()).orElseThrow(()-> new ApplicationException("Incorrect dept id"));
+        BeanUtils.copyProperties(dto, e);
+        e.setDept(d);
+        empRepo.save(e);
+        
+       return  e;
     }
 
 }

@@ -23,16 +23,17 @@ public class DepartmentApi {
     @Autowired 
     private DepartmentRepo repo;
 
-    @PostMapping 
+    @PostMapping (consumes= {"application/json","application/xml"})
     public   ResponseEntity<Department> addNewDepartment(@RequestBody   Department d){
         repo.save(d);
         return  new ResponseEntity<>(d, HttpStatus.CREATED);
     }
-    @GetMapping 
+    @GetMapping(produces="application/xml") //MIME -Multipurpose Internet Mail Extensions
     public List<Department> getAllDepartments(){
         return repo.findAll();
     }
-    @GetMapping("/{deptId}")
+    //API Endpoint - touch point to communicate between client and server
+    @GetMapping(value= "/{deptId}",produces= {"application/json","application/xml"})
     public Department getById( @PathVariable("deptId") int id){
         //optional to avoid null pointer exceptions
         Optional<Department> optional  =repo.findById(id);
