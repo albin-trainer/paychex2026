@@ -1,10 +1,23 @@
 <html>
     <head>
         <script>
-            nums1=[1,2,3,4,5];
-            nums2=num1; //new copy not created, 2 ref onw obj
-            nums3=[...nums1] //new copy assign to nums3
-
+           // nums1=[1,2,3,4,5];
+           // nums2=num1; //new copy not created, 2 ref onw obj
+           // nums3=[...nums1] //new copy assign to nums3
+            let emp={"id": "106",
+      "cname": "Pranshu",
+      "gender": "M",
+      "address": {
+        "doorNo": "F-101",
+        "place": "Vadadora"
+      }};
+      console.log(emp.cname)
+      let emp2={...emp};
+      emp.cname="XX";
+            console.log(emp.cname)
+      console.log(emp2.cname)
+      emp.address.place="yyy";
+      console.log(  emp2.address.place);
         </script>
     </head>
 </html>
