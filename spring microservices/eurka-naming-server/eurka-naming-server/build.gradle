@@ -16,18 +16,17 @@ java {
 repositories {
 	mavenCentral()
 }
+
 ext {
 	set('springCloudVersion', "2025.1.3")
 }
-dependencies {
-			implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+dependencies {
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+             //js object
+            emp={"id":101,"name":"Raj","address":"Bangalore"};
+            //template expression ....
+            console.log(`Employee name is ${emp.name} and he is living in ${emp.address} `)
+
+            employees= [
+            {"id":102,"name":"Supriya","address":"Bangalore"},
+            {"id":103,"name":"Pranshu","address":"Bangalore"},
+            {"id":104,"name":"Gaurav","address":"Bangalore"},
+            {"id":105,"name":"Albin","address":"Bangalore"}
+
+           ];
+           //iterate using HOF and then use Arrow Function
+            //gives a new array
+          var names= employees.map(getName);
+
+          console.log(names)
+           function getName(e){
+                return e.name;
+           }
+           empIds=employees.map(e=>e.id);
+           
+           console.log(empIds);
+           function hello(){
+              //  document.write("Paychex")
+              var heading=document.getElementById("myheading");//reads the heading node
+              heading.innerHTML="Welcome to Paychex";
+           }
+        </script>
+    </head>
+        <body>
+            <h1 id="myheading">I m heading</h1>
+            <p>i m a paragraph</p>
+            <button onclick="hello()"> click me</button>
+        </body>
+</html>

@@ -1,0 +1,10 @@
+create fakejson folder
+
+create a file called db.json
+open cmd prompt
+
+//to install fake json server
+npm install -g json-server
+
+//to start server
+npx json-server --watch db.json --port 3001

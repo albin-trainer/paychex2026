@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            var fruits=["Mango","Apple","Banana","Orange"];
+            //can use traditional loop
+            //for in loop
+           /*for(i in fruits){
+                console.log(fruits[i])
+            }*/
+
+            fruits.forEach(print); //just refering not calling
+            function print(c){
+                console.log(c)
+            }
+            console.log("----------------")
+
+            fruits.forEach(  function print(c){
+                console.log(c)
+            });
+            console.log("-----Arrow Function----")
+            p =  (c)=>console.log(c)
+            fruits.forEach(p);
+            console.log("***************")
+            fruits.forEach( c=>console.log(c) )
+
+        </script>
+    </head>
+    <body>
+        <h1>Hello javascript</h1>
+    </body>
+</html>

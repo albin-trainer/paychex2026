@@ -1,0 +1,77 @@
+{
+  "customers": [
+    {
+      "id": "101",
+      "cname": "Saurabh",
+      "gender": "M",
+      "address": {
+        "doorNo": "A-101",
+        "place": "UP"
+      }
+    },
+    {
+      "id": "102",
+      "cname": "Priya",
+      "gender": "F",
+      "address": {
+        "doorNo": "B-101",
+        "place": "Nagpur"
+      }
+    },
+    {
+      "id": "103",
+      "cname": "Keerthana",
+      "gender": "F",
+      "address": {
+        "doorNo": "C-101",
+        "place": "Davanagere"
+      }
+    },
+    {
+      "id": "104",
+      "cname": "Manas",
+      "gender": "M",
+      "address": {
+        "doorNo": "D-101",
+        "place": "Tirusur"
+      }
+    },
+    {
+      "id": "105",
+      "cname": "Nayana",
+      "gender": "F",
+      "address": {
+        "doorNo": "E-101",
+        "place": "Kasargod"
+      }
+    },
+    {
+      "id": "106",
+      "cname": "Pranshu",
+      "gender": "M",
+      "address": {
+        "doorNo": "F-101",
+        "place": "Vadadora"
+      }
+    },
+    {
+      "id": "Zffrdf1pWcA",
+      "cname": "Albin",
+      "gender": "M",
+      "address": {
+        "doorNo": "C-001",
+        "place": "Bangalore"
+      }
+    },
+    {
+      "id": "D2b4o8YTQSA",
+      "cname": "we",
+      "gender": "F",
+      "address": {
+        "doorNo": "sd",
+        "place": "sd"
+      }
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
